@@ -1,0 +1,29 @@
+<h2 class="md-title">Tabs</h2>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="Primeira tab">
+        <h1>Hello TDC</h1>
+    </md-tab>
+    <md-tab label="Segunda tab">
+        <div ng-controller="MaterialController" layout="column" layout-fill>
+            <md-toolbar md-scroll-shrink="true">
+                <div class="md-toolbar-tools">
+                    <h3>Star Wars</h3>
+                </div>
+            </md-toolbar>
+            <md-content style="height: 500px;">
+                <md-list>
+                    <md-list-item class="md-3-line" ng-repeat="user in users">
+                        <div layout="row">
+                            <img ng-src="{{user.img}}" alt="{{user.name}}" class="avatar">
+                            <div class="md-list-item-text">
+                                <h3>{{user.nome}}</h3>
+                                <h4>{{user.email}}</h4>
+                            </div>
+                        </div>
+                        <md-divider inset></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+    </md-tab>
+</md-tabs>

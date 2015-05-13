@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body ng-app="materialApp">
+    <div layout="column" style="height:100%;">
+        <section layout="row" flex style="height:100%;">
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+                <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">TDC 2015</h1>
+                </md-toolbar>
+                <md-content class="md-padding" layout="column" layout-align="start start">
+                    <md-button href="#/button" class="md-primary">
+                        button
+                    </md-button>
+                    <md-button href="#/chips" class="md-primary">
+                        Chips
+                    </md-button>
+                    <md-button href="#/form" class="md-primary">
+                        Form
+                    </md-button>
+                    <md-button href="#/tabs" class="md-primary">
+                        Tabs
+                    </md-button>
+                    <md-button href="#/dialog" class="md-primary">
+                        Dialog
+                    </md-button>
+                </md-content>
+            </md-sidenav>
+            <md-card flex style="height: 100%">
+                <md-card-content>
+                    <md-content layout="column">
+                        <div ng-view></div>
+                    </md-content>
+                </md-card-content>
+            </md-card>
+        </section>
+    </div>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/src/state.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/form.controller.js"></script>
+    <script src="/src/chips.controller.js"></script>
+    <script src="/src/dialog.controller.js"></script>
+</body>
+
+</html>

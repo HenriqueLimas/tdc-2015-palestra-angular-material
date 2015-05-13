@@ -1,0 +1,12 @@
+<h2 class="md-title">Chips</h2>
+<md-content class="md-padding" layout="column">
+    
+    <md-chips ng-model="ctrl.myChips" md-on-append="ctrl.novoPersonagem($chip)">
+        <md-chip-template>
+            <strong>{{$chip.name}}</strong>
+            <em>({{$chip.type}})</em>
+        </md-chip-template>
+    </md-chips>
+
+    
+</md-content>

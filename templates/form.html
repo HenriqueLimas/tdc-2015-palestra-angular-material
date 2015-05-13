@@ -1,0 +1,36 @@
+<h2 class="md-title">Form</h2>
+<md-content class="md-padding" layout="column" layout-align="center center">
+    <h2 class="md-title">Login Jedi</h2>
+
+
+    <form name="primeiroForm">
+        <div layout="row">
+            <md-input-container>
+                <md-icon md-svg-icon="img/icons/darth_vader.svg"></md-icon>
+                <input required type="text" ng-model="usuario.nome" placeholder="Nome">
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container>
+                <md-icon md-svg-icon="img/icons/death_star.svg"></md-icon>
+                <input required type="email" ng-model="usuario.email" placeholder="E-mail">
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container>
+                <md-icon md-svg-icon="img/icons/light_saber_green.svg"></md-icon>
+                <input required type="password" ng-model="usuario.password" placeholder="Password">
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="center center">
+            <md-button ng-click="formCtrl.salvar()" ng-disabled="primeiroForm.$invalid" class="md-primary">
+                Salvar
+            </md-button>
+        </div>
+        <div ng-if="formCtrl.isSaving" layout="row" layout-align="center center">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+    </form>
+
+
+</md-content>

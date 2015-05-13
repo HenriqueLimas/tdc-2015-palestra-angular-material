@@ -1,0 +1,9 @@
+.avatar {
+    max-width: 42px;
+    max-height: 45px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    margin-right: 14px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
